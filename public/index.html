@@ -1,26 +1,64 @@
-<!-- Add this to the head of your HTML file -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-<body>
-  <h1>Firebase Authentication Example</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-  <div id="login-form">
-    <h2>Login</h2>
-    <label>Email: <input type="email" id="login-email"></label>
-    <label>Password: <input type="password" id="login-password"></label>
-    <button onclick="login()">Login</button>
-  </div>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.7.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.7.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="style.css">
 
-  <div id="register-form">
-    <h2>Register</h2>
-    <label>Email: <input type="email" id="register-email"></label>
-    <label>Password: <input type="password" id="register-password"></label>
-    <button onclick="register()">Register</button>
-  </div>
+   
+    
+  </head>
+  <body>
+    <head>
+      <h1 align="center">SELF PEDIA</h1>
+    </head>
+    <main>
+      <div class="container">
+        <form id="loginForm">
+            <h2 align="center">Login</h2>
+            <label for="loginEmail" id="textemail">Email:</label> <br>
+            <input type="email" id="loginEmail" required> <br>
+            <label for="loginPassword">Password:</label> <br>
+            <input type="password" id="loginPassword" required> <br><br>
+            <button type="button" onclick="login()" id="btn1">Login</button>
+        </form>
+      </div>
+      <div id="container1">
+        <form id="registerForm">
+            <h2>Register</h2>
+            <label for="registerEmail"></label>
+            <input type="email" id="registerEmail" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+      </div>
+    
+  </main>
 
-  <div id="user-info"></div>
-
-  <script src="your-firebase-config.js"></script>
-  <script src="your-authentication-script.js"></script>
-</body>
+    <script src="script.js"></script>
+    
+  
+  </body>
+</html>
