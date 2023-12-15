@@ -1,0 +1,26 @@
+<!-- Add this to the head of your HTML file -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<body>
+  <h1>Firebase Authentication Example</h1>
+
+  <div id="login-form">
+    <h2>Login</h2>
+    <label>Email: <input type="email" id="login-email"></label>
+    <label>Password: <input type="password" id="login-password"></label>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="register-form">
+    <h2>Register</h2>
+    <label>Email: <input type="email" id="register-email"></label>
+    <label>Password: <input type="password" id="register-password"></label>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <div id="user-info"></div>
+
+  <script src="your-firebase-config.js"></script>
+  <script src="your-authentication-script.js"></script>
+</body>
